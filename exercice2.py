@@ -1,3 +1,4 @@
+# exercice terminé mais je n'aurais pas réussi sans aide (ou alors peut-être quelques jours plus tard)
 print()
 
 # 2.1
@@ -23,13 +24,16 @@ def ask_int_input_return_list() :
     for i in int_list :
         count = int_list.count(i)
 
-        if count > 1 and not i in count_list :
+        if count >= 1 and not i in count_list :
             count_list.append(i)
 
+
             output += count
-        
+
+    print()
     print("Le nombre d'éléments dupliqués dans la liste est de : " + str(output))
     print("La nouvelle liste, sans les éléments dupliqués : " + str(count_list))
+    print()
 
     return output
 

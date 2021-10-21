@@ -1,3 +1,4 @@
+# exercice terminé, juste une dernière amélioration à ajouter quand j'aurai fait les autres exercices
 print()
 
 # fonction qui transforme le string entré par l'utilisateur en liste
