@@ -1,4 +1,4 @@
-# exercice terminé, juste une dernière amélioration à ajouter quand j'aurai fait les autres exercices
+# exercice terminé, juste une dernière amélioration à ajouter quand j'aurai fait les autres exercices (si j'y arrive un jour)
 print()
 
 # fonction qui transforme le string entré par l'utilisateur en liste

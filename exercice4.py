@@ -1,9 +1,9 @@
-# exercice en cours (je ne suis pas sûr d'être parti dans la bonne direction, je crois que c'est un début d'usine à gaz)
+# exercice en cours (je ne suis pas sûr d'être parti dans la bonne direction, je crois que c'est un début d'usine à gaz en plus)
 print()
 
-zero = 0
-twenty = 20
 fifty = 50
+twenty = 20
+zero = 0
 
 def calculate_darts_probability(max_points=300) :
     fifty_list = []
@@ -41,8 +41,5 @@ def calculate_darts_probability(max_points=300) :
     #         print(i)
     
     # print(list_of_lists)
-
-
-
 
 calculate_darts_probability()
