@@ -1,4 +1,4 @@
-# exercice terminé, juste une dernière amélioration à ajouter quand j'aurai fait les autres exercices (si j'y arrive un jour)
+# exercice terminé
 print()
 
 # fonction qui transforme le string entré par l'utilisateur en liste
@@ -23,12 +23,18 @@ def return_index_and_values(list) :
     index_list = []
     values_list = []
 
+    index_count = 0
+
     for i in list :
 
-        # TODO (bug) : enumerate or import numpy : numpy.where()
-        index_list.append(list.index(i))
+        # enumerate or import numpy : numpy.where()
+        # au final j'ai utilisé un variable représentant l'index mais qui n'est pas réellement l'index
+        index_list.append(index_count)
         values_list.append(i)
-        print("index : " + str(list.index(i)) + "  valeur : " + str(i))
+
+        print("index : " + str(index_count) + "  valeur : " + str(i))
+
+        index_count += 1
 
     return index_list, values_list
 
@@ -55,8 +61,9 @@ def return_multiple_of_three_list(list) :
 
     for i in list :
         multiple = int(i) * 3
+
         multiple_list.append(multiple)
-    
+
     return multiple_list
 
 print("Liste des multiples de 3 des éléments de la liste : " + str(return_multiple_of_three_list(inputted_list)))
@@ -68,6 +75,7 @@ def return_greatest_number(list) :
     greatest_number = int(list[0])
 
     for i in list :
+
         if int(i) > greatest_number :
             greatest_number = int(i)
 
@@ -82,6 +90,7 @@ def return_smallest_number(list) :
     smallest_number = int(list[0])
 
     for i in list :
+
         if int(i) < smallest_number :
             smallest_number = int(i)
 
@@ -96,6 +105,7 @@ def return_number_of_even_elements(list) :
     number_of_even_elements = 0
 
     for i in list :
+
         if int(i) % 2 == 0 :
             number_of_even_elements += 1
 
@@ -110,6 +120,7 @@ def return_sum_of_odd_elements(list) :
     sum = 0
 
     for i in list :
+
         if int(i) % 2 != 0 :
             sum += int(i)
 
