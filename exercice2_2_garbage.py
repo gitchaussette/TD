@@ -1,4 +1,4 @@
-# exercice terminé ! (J'ai nettoyé tout le code poubelle et les print, ils sont dans exercice2_2_garbage.py)
+# exercice en cours
 from string import ascii_uppercase
 
 print()
@@ -14,6 +14,7 @@ def encode_message() :
     double_alphabet_list = splitted_alphabet + splitted_alphabet
 
     n_list = []
+    # double_n_list = []
 
     is_message_correctly_inputted = False
     is_going_to_crash = True
@@ -41,7 +42,6 @@ def encode_message() :
 
         print()
 
-    # boucle qui génère une liste de plus en plus longue (si le mot-clé est plus court que le mot à coder)
     while not is_n_input_longer_than_message :
 
         for letter_n_input in n_input :
@@ -51,31 +51,59 @@ def encode_message() :
                 if letter_n_input == letter_alphabet :
 
                         n_list.append(alphabet_list.index(letter_alphabet))
-
+                        print(n_list)
+                        print(len(n_list))
+                        print(len(message_input))
+                
                 if len(n_list) >= len(message_input) :
+
                     is_n_input_longer_than_message = True
 
 
-    # encodage des lettres
     for letter_message in message_input :
 
         for letter_alphabet in alphabet_list :
 
             if letter_message == letter_alphabet :
                 try :
+                    # print(alphabet_list[alphabet_list.index(letter_message) + n_list[current_index]])
                     encoded_letter = alphabet_list[alphabet_list.index(letter_message) + n_list[current_index]]
-
                     encoded_message += encoded_letter
 
                 except :
+                    # print(double_alphabet_list[alphabet_list.index(letter_message) + n_list[current_index]])
                     encoded_letter = double_alphabet_list[alphabet_list.index(letter_message) + n_list[current_index]]
-
                     encoded_message += encoded_letter
 
                 current_index += 1
 
 
     return encoded_message
+
+                # GARBAGE
+                # try :
+                #     encoded_letter = alphabet_list[n_list[current_index]]
+                #     print(encoded_letter)
+                #     encoded_message += encoded_letter
+                #     current_index += 1
+                #     print(current_index)
+                # except :
+                #     pass
+
+                # GARBAGE
+                # try :
+                #     encoded_letter = alphabet_list[alphabet_list.index(letter_alphabet) + int(n_list[current_index])]
+                #     encoded_message += encoded_letter
+                # print("alphabet_list[alphabet_list.index(letter_alphabet)]) : " + str(alphabet_list[alphabet_list.index(letter_alphabet)]))
+                # print("n_list[current_index]) : " + str(n_list[current_index]))
+                # print("encoded_letter : " + str(encoded_letter))
+                #     current_index += 1
+                # except :
+                #     encoded_letter = double_alphabet_list[alphabet_list.index(n_list[current_index])]
+                #     encoded_message += encoded_letter
+                #     current_index += 1
+
+    # return encoded_message
 
 
 print("Message encodé : " + str(encode_message()))
