@@ -16,5 +16,5 @@
 
 <ul>
   <p>- exercice 1  <b>FAIT</b></p>
-  <p>- exercice 2  <i>FAIT</i></p>
+  <p>- exercice 2  <b>FAIT</b></p>
 </ul>
